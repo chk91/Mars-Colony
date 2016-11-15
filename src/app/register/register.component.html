@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="check-in-page">  
+
+    <h1>Register</h1>
+
+      <h2 class="page-header">Register</h2>
+
+    <div class= "register-input-wrapper">
+      <form>
+        <input type="text" placeholder="Name" [(ngModel)]="colonist.name" name="name"/>
+        <input type="number" placeholder="Age" [(ngModel)]="colonist.age" name="age"/>
+      </form>
+
+      <div class="occupation-select">
+        <select name="select" class="occupation-option">
+          <option value=""selected>Select occupation</option>
+          <option value="dust-farmer">Dust Farmer</option> 
+          <option value="alien-hunter">Alien hunter</option>
+          <option value="battery-tech">Battery technician</option>
+          <option value="toga-teacher">Yoga teacher</option>
+          <option value="front-end-dev">Front-end developer</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="register-button">Check in</button>
+  
+    </div>
+    
+</body>
+</html>

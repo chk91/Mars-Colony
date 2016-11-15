@@ -1,0 +1,61 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.check-in-page {
+    background-color: black;
+    height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    padding: 2rem 1rem; 
+}
+
+.register-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.register-input-wrapper input {
+    padding-left: .5rem;
+    width: 100%;
+    height: 2rem;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    background-color: black;
+    font-size: 1rem;
+}
+
+.register-input-wrapper ::-webkit-input-placeholder {
+    color: red;
+}
+
+.register-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: white;
+}
+
+.occupation-option{
+    padding-left: .5rem;
+    width: 100%;
+    height: 2rem;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: red;
+    margin-bottom: 1.5rem;
+    background-color: black;
+    font-size: 1rem;
+    background-image: black;
+}
