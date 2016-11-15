@@ -20,12 +20,7 @@
 
       <div class="occupation-select">
         <select name="select" class="occupation-option">
-          <option value=""selected>Select occupation</option>
-          <option value="dust-farmer">Dust Farmer</option> 
-          <option value="alien-hunter">Alien hunter</option>
-          <option value="battery-tech">Battery technician</option>
-          <option value="toga-teacher">Yoga teacher</option>
-          <option value="front-end-dev">Front-end developer</option>
+          <option *ngFor="let job of marsJobs">{{ job.name }}</option>
         </select>
       </div>
     </div>

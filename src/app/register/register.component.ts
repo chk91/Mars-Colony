@@ -11,11 +11,13 @@ import JobsService from '../services/jobs.service';
 export class RegisterComponent implements OnInit {
 
   colonist: Colonist;
-  marsJob : Job[];
+  marsJobs : Job[];
   
   constructor(jobService: JobsService) { 
     this.colonist = new Colonist('', null, null, null);
+    
     jobService.getJobs().subscribe((jobs) => {
+      this.marsJobs = jobs;
       console.log(jobs);
     })
 
