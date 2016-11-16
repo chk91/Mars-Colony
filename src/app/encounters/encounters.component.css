@@ -51,7 +51,7 @@ body {
 }
 
 .encounters-page {
-    background-color: black;
+    background-color: white;
     height: 100vh;
     width: 100%;
 }
@@ -61,6 +61,7 @@ body {
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
+    font-size: 2rem;
 }
 
 .encounters-header span {

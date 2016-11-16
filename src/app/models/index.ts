@@ -1,4 +1,4 @@
-export class Encounter {
+export class Encounters {
     constructor(
         public id: number,
         public date: string,

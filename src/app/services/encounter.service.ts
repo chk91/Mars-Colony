@@ -1,8 +1,20 @@
 import { Injectable } from '@angular/core';
-
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { Encounters } from '../models';
+import 'rxjs/add/operator/map';
 @Injectable()
-export class EncounterService {
+export default class EncountersService {
 
-  constructor() { }
+    ENCOUNTERS_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
+  constructor(private http: Http) { }
+
+  getJobs(): Observable<Encounters[]> {
+   return this.http
+              .get(this.ENCOUNTERS_JSON)
+              .map((res: Response) => res.json().encounters);
+  }
+                  
 }
+
