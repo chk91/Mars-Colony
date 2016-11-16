@@ -16,13 +16,20 @@ export class Job {
     ) {}
 }
 
-export class Colonist {
+export class NewColonist {
     constructor(
         public name: string,
-        public id: string,
         public age: number,
-        public job: Job
+        public job_id: string
     ) {}
+}
+
+interface Colonist {
+        name: string,
+        id: string,
+        age: number,
+        job: Job
+
 }
 
 export class Alien {
