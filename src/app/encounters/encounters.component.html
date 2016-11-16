@@ -11,8 +11,8 @@
 
     <div class="encounters-wrapper">
       <ul class="encounters-list">
-        <li *ngFor="let encounter of encountersList">
-            <div>{{encounter.date}}{{encounter.atype}}</div>
+        <li class="encounters-detail" *ngFor="let encounter of encountersList">
+            <div>{{encounter.date}} - {{encounter.atype}}</div>
             <p>{{encounter.action}}</p>
         </li>
       </ul>

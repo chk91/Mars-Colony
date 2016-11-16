@@ -1,0 +1,151 @@
+.welcome-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background: url("../assets/uranusWallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcome-page h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.welcome-page h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+}
+
+/*Pulsing Circle @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+#pulser {
+  /*margin-top: 20px;
+  margin-left: 30px;*/
+  position: relative;
+  background: #45453f;
+}
+
+.pulse {
+  width: 2px;
+  height: 2px;
+  border: 5px solid transparent;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: black;
+  z-index: 10;
+  position: absolute;
+}
+
+.dot {
+  border: 10px solid black;
+  background: transparent;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  height: 50px;
+  width: 50px;
+  -webkit-animation: pulse 1.0s ease-out;
+  -moz-animation: pulse 1.0s ease-out;
+  animation: pulse 1.0s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  z-index: 1;
+  opacity: 0;
+}
+
+.dot2 {
+  border: 10px solid black;
+  background: transparent;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  height: 80px;
+  width: 80px;
+  -webkit-animation: pulse 1.5s ease-out;
+  -moz-animation: pulse 1.5s ease-out;
+  animation: pulse 1.5s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: -44px;
+  left: -44px;
+  z-index: 1;
+  opacity: 0;
+}
+
+.dot3 {
+  border: 10px solid black;
+  background: transparent;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  height: 120px;
+  width: 120px;
+  -webkit-animation: pulse 1.5s ease-out;
+  -moz-animation: pulse 1.5s ease-out;
+  animation: pulse 1.5s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: -64px;
+  left: -64px;
+  z-index: 1;
+  opacity: 0;
+}
+
+@-moz-keyframes pulse {
+ 0% {
+    -moz-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -moz-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -moz-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -moz-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -moz-transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+@-webkit-keyframes "pulse" {
+ 0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -webkit-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -webkit-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -webkit-transform: scale(1);
+    opacity: 0.0;
+ }
+}
