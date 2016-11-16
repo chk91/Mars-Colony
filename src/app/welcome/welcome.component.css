@@ -36,13 +36,13 @@
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
-  background-color: black;
+  background-color: #01467B;
   z-index: 10;
   position: absolute;
 }
 
 .dot {
-  border: 10px solid black;
+  border: 10px solid #0191FF;
   background: transparent;
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
@@ -63,7 +63,7 @@
 }
 
 .dot2 {
-  border: 10px solid black;
+  border: 10px solid #279FFB;
   background: transparent;
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
@@ -84,7 +84,7 @@
 }
 
 .dot3 {
-  border: 10px solid black;
+  border: 10px solid #49AFFE;
   background: transparent;
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;

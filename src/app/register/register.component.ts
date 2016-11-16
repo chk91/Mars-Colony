@@ -20,7 +20,8 @@ export class RegisterComponent implements OnInit {
     
     jobService.getJobs().subscribe((jobs) => {
       this.marsJobs = jobs;
-      console.log(jobs);
+    }, (err) => {
+      console.log(err);
     })
 
   }
