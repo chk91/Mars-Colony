@@ -8,30 +8,30 @@
 
   <div class="check-in-page">  
 
-    <h1>Register</h1>
+      <h1>Register</h1>
 
       <h2 class="page-header">Register</h2>
 
     <div class= "register-input-wrapper">
-      <form>
-        <input type="text" placeholder="Name" [(ngModel)]="colonist.name" name="name"/>
-        <input type="number" placeholder="Age" [(ngModel)]="colonist.age" name="age"/>
-      </form>
+      <form [formGroup]="registerForm" class="register-form" (ngSubmit)="onSubmit($event)">
 
-      <div class="occupation-select">
+        <input type="text" placeholder="Name" formControlName="name"/>
+        <input type="number" placeholder="Age" formControlName="age"/>
+      
+        <div class="occupation-select">
 
-        <select [(ngModel)]="colonist.job_id" class="occupation-option">
-          <option [value]="NO_JOB_SELECTED">-- Select a Job --</option>
-          <option *ngFor="let job of marsJobs" [value]="job.id">{{ job.name }}</option>
-        </select>
+          <select formControlName="job_id" class="occupation-option">
+            <option [value]="NO_JOB_SELECTED">-- Select a Job --</option>
+            <option *ngFor="let job of marsJobs" [value]="job.id">{{ job.name }}</option>
+          </select>
 
-        {{colonist.name}} | {{colonist.age}} | {{colonist.job_id}}
+        </div>
 
-      </div>
+         <button class="register-button">Check in</button>
+
+      </form> 
     </div>
 
-    <button [disabled]="!jobSelected" class="register-button">Check in</button>
-  
     </div>
     
 </body>

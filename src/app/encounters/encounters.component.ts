@@ -9,8 +9,8 @@ import EncountersService from '../services/encounter.service'
   providers:[EncountersService]
 })
 
-
 export class EncountersComponent implements OnInit {
+  
   encountersList: Encounters[];
 
   constructor(encounterService: EncountersService) { 

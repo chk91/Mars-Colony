@@ -1,8 +1,3 @@
-body {
-    width: 100%;
-    height: 100%;
-}
-
 .check-in-page {
     background-color: black;
     height: 100vh;
@@ -58,4 +53,8 @@ body {
     background-color: black;
     font-size: 1rem;
     background-image: black;
+}
+
+.register-form .ng-invalid {
+    
 }

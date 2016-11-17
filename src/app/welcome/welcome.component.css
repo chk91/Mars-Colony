@@ -56,8 +56,8 @@
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   position: absolute;
-  top: -30px;
-  left: -30px;
+  top: -29px;
+  left: -29px;
   z-index: 1;
   opacity: 0;
 }

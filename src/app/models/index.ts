@@ -32,7 +32,7 @@ interface Colonist {
 
 }
 
-export class Alien {
+export class Aliens {
     constructor(
         public id: number,
         public type: string,
