@@ -2,12 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { NewColonist, Job } from '../models';
 import JobsService from '../services/jobs.service';
+import { cantBe } from '../shared/validators';
 
-function cantBe(value: string): ValidatorFn {
-  return (control: AbstractControl): {[key: string]: any} => {
-    return value === '(none)' ? {'cant be none': { value}} : null;
-  };
-}
 
 @Component({
   selector: 'app-register',
@@ -33,12 +29,6 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  cantBe(value: string) : ValidatorFn {
-    return (control: AbstractControl): {[key: string]: any} => {
-      return control.value === value ? {'cant be none': { value }} : null;
-    }
-  }
-
   too0ld(value: number): ValidatorFn {
     return (control: AbstractControl): {[key: string]: any} => {
       return control.value > 100 ? {'too old': { value }} : null;
@@ -48,8 +38,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   this.registerForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(2)] ),
-    age: new FormControl('', [Validators.required, this.too0ld(100)]),
-    job_id: new FormControl(this.NO_JOB_SELECTED, [this.cantBe(this.NO_JOB_SELECTED)])
+    job_id: new FormControl(this.NO_JOB_SELECTED, [cantBe(this.NO_JOB_SELECTED)])
   });
   }
 

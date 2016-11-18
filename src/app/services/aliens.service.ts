@@ -10,11 +10,12 @@ export default class AliensService {
 
   constructor(private http: Http) { }
 
-  getJobs(): Observable<Aliens[]> {
+  getAliens(): Observable<Aliens[]> {
    return this.http
               .get(this.ALIENS_JSON)
               .map((res: Response) => res.json().aliens);
   }
+  
                   
 }
 

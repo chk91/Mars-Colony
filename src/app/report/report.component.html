@@ -23,3 +23,14 @@
 </body>
 </html>
 -->
+
+<div class = "encounter-form">
+  <form [formGroup]="reportForm" (ngSubmit)="onSubmit($event)">
+      <select formControlName="atype">
+        <option [value]="NO_ALIEN_SELECTED">-- Select an Alien --</option>
+        <option *ngFor="let alien of aliensList" [value]="alien.type">{{ alien.type }}</option>
+      </select>
+      <textarea placeholder="Action taken" formControlName= "action"></textarea>
+      <button>Submit Report</button>
+  </form>
+</div>
