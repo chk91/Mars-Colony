@@ -4,6 +4,7 @@ import AliensService from '../services/aliens.service';
 import EncountersService from '../services/encounter.service';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import {cantBe} from '../shared/validators';
+import { Router } from '@angular/router';
 
 
 const notNone = (value) => {
@@ -25,7 +26,8 @@ export class ReportComponent implements OnInit {
     NO_ALIEN_SELECTED = '(none)';
 
   constructor(private alienService: AliensService,
-              private encountersService: EncountersService) { 
+              private encountersService: EncountersService,
+              private router: Router) { 
     
     alienService.getAliens().subscribe((aliens) => {
       this.aliensList = aliens;
@@ -56,6 +58,7 @@ export class ReportComponent implements OnInit {
     this.encountersService.submitEncounter(encounter)
       .subscribe((enc) => {
         console.log('get encounter', enc);
+        this.router.navigate(['encounters']);
       }, (err) => {
         console.log('there was an error');
       })
