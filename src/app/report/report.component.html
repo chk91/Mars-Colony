@@ -1,36 +1,26 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
-<body>
 
-  <h2>Register</h2>
+<body class="report-page">
 
-    <div>
-      <form>
-        <select>
-          <option></option>
-          <option></option>
-        </select>
-        <input type="text">
+  <h1 class="report-header">Report Encounter<span>Safety on Uranus is your responsiblity</span></h1>
 
-      <button>Submit Report</button>
-      </form>
-    </div>
-
-</body>
-</html>
--->
-
-<div class = "encounter-form">
-  <form [formGroup]="reportForm" (ngSubmit)="onSubmit($event)">
-      <select formControlName="atype">
+  <div class="encounter-wrapper">
+    <form class="report-form" [formGroup]="reportForm" (ngSubmit)="onSubmit($event)">
+      <select class="alien-select" formControlName="atype">
         <option [value]="NO_ALIEN_SELECTED">-- Select an Alien --</option>
         <option *ngFor="let alien of aliensList" [value]="alien.type">{{ alien.type }}</option>
       </select>
-      <textarea placeholder="Action taken" formControlName= "action"></textarea>
-      <button>Submit Report</button>
-  </form>
-</div>
+      <textarea class="report-textarea" placeholder="Action taken" formControlName="action"></textarea>
+      <button class="report-button">Submit Report</button>
+    </form>
+  </div>
+
+</body>
+
+</html>

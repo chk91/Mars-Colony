@@ -12,7 +12,7 @@
     <div class="encounters-wrapper">
       <ul class="encounters-list">
         <li class="encounters-detail" *ngFor="let encounter of encountersList">
-            <div>{{encounter.date}} - {{encounter.atype}}</div>
+            <div>{{encounter.date}} - {{encounter.atype}} - {{encounter.colonist_id}}</div>
             <p>{{encounter.action}}</p>
         </li>
       </ul>

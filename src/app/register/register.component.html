@@ -13,7 +13,7 @@
       <h2 class="page-header">Register</h2>
 
     <div class= "register-input-wrapper">
-      <form [formGroup]="registerForm" class="register-form" (ngSubmit)="onSubmit($event)">
+      <form [ngClass] = "{ showValidation: submitted }" [formGroup]="registerForm" class="register-form" (ngSubmit)="onSubmit($event)">
 
         <input type="text" placeholder="Name" formControlName="name"/>
         <input type="number" placeholder="Age" formControlName="age"/>

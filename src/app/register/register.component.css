@@ -29,7 +29,7 @@
 }
 
 .register-input-wrapper ::-webkit-input-placeholder {
-    color: red;
+    color: #AED0FF;
 }
 
 .register-button {
@@ -48,13 +48,30 @@
     height: 2rem;
     border: none;
     border-bottom: 1px solid #fff;
-    color: red;
+    color: #AED0FF;
     margin-bottom: 1.5rem;
     background-color: black;
     font-size: 1rem;
     background-image: black;
 }
 
-.register-form .ng-invalid {
-    
+.showValidation .ng-invalid {
+    border: 2px solid cyan;
+    animation: border-pulsate 1s infinite;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.8);
+    -moz-box-shadow:    0px 0px 25px 0px rgba(50, 50, 50, 0.8);
+    box-shadow:         0px 0px 25px 0px rgba(50, 50, 50, 0.8);
+}
+
+@keyframes border-pulsate {
+    0%   { border-color: rgba(0, 255, 255, 1); }
+    50% { border-color: rgba(0, 255, 255, 0); }
+    100%   { border-color: rgba(0, 255, 255, 1); }
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border: 20px solid cyan;
+    animation: border-pulsate 2s infinite;
 }
