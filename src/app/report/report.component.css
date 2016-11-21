@@ -4,10 +4,11 @@
 }
 
 .report-page h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
     text-align: center;
     padding: 2rem;
+    text-shadow: 2px 1px 23px white;
 }
 
 .report-header {
@@ -57,4 +58,18 @@
     margin-bottom: 1.5rem;
     background-color: black;
     font-size: 1rem;
+}
+
+.showValidation .ng-invalid {
+    border: 2px solid cyan;
+    animation: border-pulsate 1s infinite;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.8);
+    -moz-box-shadow:    0px 0px 25px 0px rgba(50, 50, 50, 0.8);
+    box-shadow:         0px 0px 25px 0px rgba(50, 50, 50, 0.8);
+}
+
+@keyframes border-pulsate {
+    0%   { border-color: rgba(0, 255, 255, 1); }
+    50% { border-color: rgba(0, 255, 255, 0); }
+    100%   { border-color: rgba(0, 255, 255, 1); }
 }

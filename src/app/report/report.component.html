@@ -8,10 +8,10 @@
 
 <body class="report-page">
 
-  <h1 class="report-header">Report Encounter<span>Safety on Uranus is your responsiblity</span></h1>
+  <h1 class="report-header">report Encounter<span>safety on uranus is your responsiblity</span></h1>
 
   <div class="encounter-wrapper">
-    <form class="report-form" [formGroup]="reportForm" (ngSubmit)="onSubmit($event)">
+    <form  class="report-form" [formGroup]="reportForm" (ngSubmit)="onSubmit($event)">
       <select class="alien-select" formControlName="atype">
         <option [value]="NO_ALIEN_SELECTED">-- Select an Alien --</option>
         <option *ngFor="let alien of aliensList" [value]="alien.type">{{ alien.type }}</option>

@@ -42,3 +42,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+@font-face {
+    font-family: 'spac3_neonregular';
+    src: url('assets/fonts/spac3_neon_free_promo-webfont.eot');
+    src: url('assets/fonts/spac3_neon_free_promo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/spac3_neon_free_promo-webfont.woff2') format('woff2'),
+         url('assets/fonts/spac3_neon_free_promo-webfont.woff') format('woff'),
+         url('assets/fonts/spac3_neon_free_promo-webfont.ttf') format('truetype'),
+         url('assets/fonts/spac3_neon_free_promo-webfont.svg#spac3_neonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+h1, h2{
+	font-family: 'spac3_neonregular';
+}
