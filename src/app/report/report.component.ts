@@ -24,6 +24,7 @@ export class ReportComponent implements OnInit {
     aliensList: Aliens[];
     reportForm: FormGroup;
     NO_ALIEN_SELECTED = '(none)';
+    submitted : boolean;
 
   constructor(private alienService: AliensService,
               private encountersService: EncountersService,
@@ -49,6 +50,9 @@ export class ReportComponent implements OnInit {
 
   onSubmit(event) {
     event.preventDefault();
+
+    if(this.reportForm.invalid) {
+      this.submitted = true; } else {
     const date = this.getDate();
     const atype = this.reportForm.get('atype').value;
     const action = this.reportForm.get('action').value;
@@ -63,5 +67,5 @@ export class ReportComponent implements OnInit {
         console.log('there was an error');
       })
   }
-
+  }
 }
